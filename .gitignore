@@ -129,4 +129,9 @@ dmypy.json
 .pyre/
 
 # project specific
-congif.py
+config.py
+*.fasta
+*.tsv
+*.csv
+*.list
+
