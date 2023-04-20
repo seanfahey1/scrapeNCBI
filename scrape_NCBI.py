@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 
+import http.client
 import json
 import logging
 import sys
 from pathlib import Path
 from time import sleep
 from urllib.error import HTTPError
-import http.client
 
 from Bio import Entrez
 
 import config  # requires config.py file with Entrez credentials.
 
-logging.basicConfig(filename='info.log', level=logging.DEBUG)
+logging.basicConfig(filename="info.log", level=logging.DEBUG)
 
 Entrez.email = config.email
 Entrez.api_key = config.api_key
@@ -47,7 +47,9 @@ def get_sequences(
 
     with open(out_file, "a") as out:
         for start in range(start_batch, count, batch_size):
-            logging.info(f"\t{key} - start: {start}, end: {start + batch_size}, total: {count}")
+            logging.info(
+                f"\t{key} - start: {start}, end: {start + batch_size}, total: {count}"
+            )
             sleep(10)
 
             attempt = 0
@@ -67,22 +69,28 @@ def get_sequences(
                     break
                 except HTTPError as err:
                     attempt += 1
-                    logging.error(f"{key} - start: {start} | Recieved HTTP error. Attempt number {attempt}")
+                    logging.error(
+                        f"{key} - start: {start} | Recieved HTTP error. Attempt number {attempt}"
+                    )
                     logging.error(err)
                     sleep(15 * attempt)
 
                 except http.client.IncompleteRead as err:
                     attempt += 1
-                    logging.error(f"{key} - start: {start} | Recieved HTTP error. Attempt number {attempt}")
+                    logging.error(
+                        f"{key} - start: {start} | Recieved HTTP error. Attempt number {attempt}"
+                    )
                     logging.error(err)
                     sleep(180)
 
                 except Exception as err:
                     attempt += 1
-                    logging.error(f"UNCAUGHT EXCEPTION!!! | {key} - start: {start} | attempt number {attempt}")
+                    logging.error(
+                        f"UNCAUGHT EXCEPTION!!! | {key} - start: {start} | attempt number {attempt}"
+                    )
                     logging.error(err)
-                    logging.error(f'skipping the following ids:')
-                    logging.error('\t'.join(search_results.get('IdList')))
+                    logging.error(f"skipping the following ids:")
+                    logging.error("\t".join(search_results.get("IdList")))
                     continue
 
             if attempt >= 20:
