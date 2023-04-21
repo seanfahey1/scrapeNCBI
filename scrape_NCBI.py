@@ -70,15 +70,15 @@ def get_sequences(
                 except HTTPError as err:
                     attempt += 1
                     logging.error(
-                        f"{key} - start: {start} | Recieved HTTP error. Attempt number {attempt}"
+                        f"{key} - start: {start} | Received HTTP error. Attempt number {attempt}"
                     )
                     logging.error(err)
                     sleep(15 * attempt)
 
-                except http.client.IncompleteRead as err:
+                except ValueError as err:
                     attempt += 1
                     logging.error(
-                        f"{key} - start: {start} | Recieved HTTP error. Attempt number {attempt}"
+                        f"{key} - start: {start} | Received urllib HTTP error. Attempt number {attempt}"
                     )
                     logging.error(err)
                     sleep(180)
