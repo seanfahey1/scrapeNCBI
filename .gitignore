@@ -135,4 +135,3 @@ config.py
 *.csv
 *.list
 retry.py
-extract-headers.py
