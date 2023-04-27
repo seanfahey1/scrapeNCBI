@@ -2,6 +2,7 @@
 
 import sys
 from collections import defaultdict
+from pathlib import Path
 
 import pandas as pd
 from Bio import SeqIO
@@ -33,13 +34,14 @@ def make_table(list_file, tsv_file):
 
 
 def main():
-    prefix = "HTJ"
-    fasta = f"{prefix}.fasta"
-    list_file = f"{prefix}.list"
-    tsv_file = f"{prefix}.tsv"
+    files = list(Path('.').glob("*.fasta"))
+    for file in files:
+        prefix = file.stem
+        list_file = f"{prefix}.list"
+        tsv_file = f"{prefix}.tsv"
 
-    extract(fasta, list_file)
-    make_table(list_file, tsv_file)
+        extract(file, list_file)
+        make_table(list_file, tsv_file)
 
 
 if __name__ == "__main__":
