@@ -45,6 +45,9 @@ def get_sequences(
     query_key = search_results["QueryKey"]
     count = int(search_results["Count"])
 
+    if start_batch >= count or start_batch == -1:
+        return
+
     with open(out_file, "a") as out:
         for start in range(start_batch, count, batch_size):
             logging.info(
