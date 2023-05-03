@@ -93,5 +93,25 @@
 		"labels": [
 			"efflux"
 		]
+	},
+	"chaperone": {
+		"completed": 0,
+		"labels": [
+			"chaperone"
+		]
+	},
+	"TMP": {
+		"completed": 0,
+		"labels": [
+			"tape measure protein",
+			"TMP"
+		]
+	},
+	"denoise": {
+		"completed": 0,
+		"labels": [
+			"structural",
+			"virion"
+		]
 	}
 }
