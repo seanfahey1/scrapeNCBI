@@ -1,6 +1,7 @@
 {
 	"HTJ": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 97000,
 		"labels": [
 			"HTJ",
 			"head-tail",
@@ -8,13 +9,15 @@
 		]
 	},
 	"baseplate": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 156200,
 		"labels": [
 			"baseplate"
 		]
 	},
 	"collar": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 67800,
 		"labels": [
 			"collar",
 			"tail fiber",
@@ -22,41 +25,47 @@
 		]
 	},
 	"major capsid": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 207600,
 		"labels": [
 			"major capsid",
 			"major-capsid"
 		]
 	},
 	"major tail": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 109600,
 		"labels": [
 			"major tail",
 			"major-tail"
 		]
 	},
 	"minor capsid": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 8400,
 		"labels": [
 			"minor capsid",
 			"minor-capsid"
 		]
 	},
 	"minor tail": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 184000,
 		"labels": [
 			"minor tail",
 			"minor-tail"
 		]
 	},
 	"portal": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 361600,
 		"labels": [
 			"portal"
 		]
 	},
-	"shaft": {
-		"completed": 0,
+	"sheath": {
+		"completed": -1,
+		"_completed": 95000,
 		"labels": [
 			"tail shaft",
 			"tail-shaft",
@@ -64,38 +73,43 @@
 		]
 	},
 	"tail spike": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 18400,
 		"labels": [
 			"tail spike",
 			"tail-spike"
 		]
 	},
 	"scaffold": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 18400,
 		"labels": [
 			"scaffold"
 		]
 	},
 	"terminase": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 315000,
 		"labels": [
 			"terminase"
 		]
 	},
 	"transporter": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 1800,
 		"labels": [
 			"transporter"
 		]
 	},
 	"efflux": {
-		"completed": 0,
+		"completed": -1,
+		"_completed": 200,
 		"labels": [
 			"efflux"
 		]
 	},
 	"chaperone": {
-		"completed": 0,
+		"completed": 14600,
 		"labels": [
 			"chaperone"
 		]
